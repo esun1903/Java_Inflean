@@ -1,4 +1,4 @@
-# Java_Inflearn🍎🍊🍉
+# Java 정리 🍎🍊🍉
 
 ## 초창기 시절에 JAVA 언어의 단점
   
@@ -249,8 +249,15 @@ Implements (인터페이스)는 다중상속을 대신해준다.
 	- 타입체크와 형변환을 생략할 수 있으므로 코드가 간결해진다. 
 	- 중복제거 가능 
 	- 컴파일 단계에서 오류를 찾을 수 있다.
-	
 
+## String , StringBuffer ,StringBuilder
+
+위에서 보는바와 같이 생성된 클래스의 주소값이 다른 것을 볼 수 있다. String은 새로운 값을 할당할 때마다 새로 생성되기 때문이다. 이와 달리 StringBuffer는 값은 memory에 append하는 방식으로 클래스를 직접생성하지 않는다. 논리적으로 따져보면 클래스가 생성될 때 method들과 variable도 같이 생성되는데, StringBuffer는 이런 시간을 사용하지 않는다.
+
+StringBuilder와 StringBuffer를 테스트 해보자. 아래의 결과를 보면 다른 값이 나온 것을 볼 수 있다. StringBuilder의 값이 더 작은 것을 볼 수 있는데 이는 쓰레드들이 동시에 StringBuilder클래스에 접근할 수 있기 때문에 일어난 결과다. 이와 달리 StringBuffer는 multi thread환경에서 다른 값을 변경하지 못하도록 하므로 web이나 소켓환경과 같이 비동기로 동작하는 경우가 많을 때는 StringBuffer를 사용하는 것이 안전할 것이다.
+
+
+출처 : https://novemberde.github.io/2017/04/15/String_0.html
 
 ## Exception(예외)
    - 오류가 발생하지 않는 프로그램은 없다. 
