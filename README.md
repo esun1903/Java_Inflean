@@ -178,7 +178,11 @@ System.gc() ; // 이걸 사용한다고 해서 GC가 바로 작동하는 것이 
    - 데이터가 추가하는데로 늘어나는 장점 O(1)
    - 배열방이 다 차면 기존 사이즈의 2배를 선언하고 기존 값을 복사한다. -> Doubling이라고 함.
    - 인덱스를 이용하여 데이터를 가져오기
- 
+   - 참고로, Arraylist를 정렬할시에는 
+  
+            Collections.sort(arrayLists[i]); // arraylist를 정렬할때에 사용하는 메소드
+        
+	
 ## Linkedlist 
   -  Arraylist 와는 다르게 엘리먼트와 엘리먼트 간의 연결(link)을 이용해서 리스트를 구현한 것을 의미한다. 
  - linkedlist는 그 위치가 흩어져 있기 때문에 서로 연결되어 있어야 한다. 
