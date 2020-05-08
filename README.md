@@ -221,13 +221,7 @@ System.gc() ; // 이걸 사용한다고 해서 GC가 바로 작동하는 것이 
  - 데이터의 순서에 상관없이 객체를 만든다. 
  - 사용자가 봤을 때 명시적이고 명확하게 이해할 수 있어야한다. 
  - 불필요한 생성자를 만들지 않고 객체를 만든다. 
-
-
-                  
-
-
-
-
+ 
 
 ## 인터페이스
 	- 자바에서 클래스들이 구현해야하는 동작을 지정하는데 사용되는 추상형
@@ -258,6 +252,18 @@ StringBuilder와 StringBuffer를 테스트 해보자. 아래의 결과를 보면
 
 
 출처 : https://novemberde.github.io/2017/04/15/String_0.html
+
+## StringTokenizer
+  긴 문자열을 지정된 구분자를 기준으로 문자열을 슬라이싱하는데 사용됨.
+  100,200,300,400 의 문자열을, 구분자를 기준으로 슬라이싱하게 되면 4개의 문자열을 획득할 수 있다. 
+  StringTokenizer의 경우 단 한개의 구분자를 사용해야 한다는 단점이 있으므로 복잡한형태의 구분자로 문자열을 나누어야할때는
+  
+ - StringTokenizer(String str, String delim) : 문자열 지정된 구분자로 나누는 Stringtokenizer를 생성한다. 
+ - StringTokenizer(String str, String delim , boolean retunDelims)  : 구분자도 토큰으로 간주 
+ - int countTokens()  : 전체 토큰의 수를 반환 
+ - boolean hasMoreTokens() : 토큰이 남아있는지 알려 줌 
+ - String nextToken() : 다음 토큰을 반환한다. 
+  
 
 ## Exception(예외)
    - 오류가 발생하지 않는 프로그램은 없다. 
