@@ -341,3 +341,11 @@ CPU가 할당되는 실체이다.
 
 ## Linker
    - 모든 오브젝트 파일들을 하나의 오브젝트 파일로 합친다.
+   
+## JVM (자바 가상 머신)
+ - Java Application을 Class Loader를 통해 읽어 들여 Java API와 함께 실행하는 것이다.
+ - Java ByteCode를 실행할 수 있는 주체이다.
+ - 인터프리터나 JIT 컴파일 방식으로 다른 컴퓨터 위에서 Java ByteCode를 실행할 수 있도록 구현한다.
+ - Java ByteCode는 플랫폼에 독립적이다.
+ - 모든 JVM은 JVM 규격에 정의된 대로 Java ByteCode를 실행한다.
+ - 이론적으로 모든 자바 프로그램은 CPU나 운영체제의 종류와 무관하게 동작할 것을 보장한다.
