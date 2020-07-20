@@ -107,7 +107,6 @@ public class ChildClass implements FatherClass, MotherClass{
 
 
 
-
 ## 객체란?
 
  세상에 존재하는 모는 것을 뜻하며, 프로그래밍에서 속성과 기능을 가지는 프로그램 단위이다.
@@ -115,6 +114,59 @@ public class ChildClass implements FatherClass, MotherClass{
 객체 (인간세상)    ㅜ                                                     객체 (프로그램)
    ex) 사람  속성: 키, 몸무게 , 기능: 의사                        사칙연산 프로그램 속성 : *,+,-,/ 
         체중계 속성: 바늘, 눈금 기능: 몸무게측정                기능: 연산기능 
+
+
+## 자바에서 포인터가 없는 이유 
+
+
+##   정수형 < 실수형 
+ byte < short < int < long          < float < double 
+ : 타입크기는 표현범위로 정하는 것 
+큰수, 작은 수 효율적인 저장이 가능하기 때문에 
+long < float 이 된다. 
+
+####
+while(1) {} -> 안되고 
+while(true)로 정확하게 줘야한다.
+
+## 양의 정수 이런거 없다. 
+unsigned 가 없어 
+signed 형만 있다. 
+
+
+10. 묵시적 형변환은 데이터 손실 발생 
+명시적 형변호는 데이터손실 발생 가능 
+양수 전용으로만 하는 것 
+11. long형인 8바이트형 값이 되는것 
+long a = 10
+
+double d = 2 
+int를 double에 ! 
+그러면 2.0 이 들어가게 된다. 
+
+
+연산은 
+동일한 데이터타입으로 할 수 있다.
+
+크기,  각 데이터의 의미가 같아ㅏ야지만 가능  
+
+long k = i*j
+
+10억 * 3 
+int * int = int -> (long) 바꿔도 
+오버플로우가 됨 
+연산결과가 long형이 될 수 있도록 만들어야함 
+
+i가 long * int -> long형이 되서 
+long으로 변환됨 
+
+데이터타입 잘 선언됨 
+==================
+
+if, switch - case / for while do while 
+
+syntex정리 
+
 
 
 ## 클래스란? 
@@ -452,3 +504,17 @@ CPU가 할당되는 실체이다.
  - 이론적으로 모든 자바 프로그램은 CPU나 운영체제의 종류와 무관하게 동작할 것을 보장한다.
  
  http://pigbrain.github.io/java/2016/04/04/Java8_on_Java
+ 
+ ## if문         ## switch문
+ 
+  if , if - else , if - else if else
+  
+  총 3가지로 되어있다.
+  
+  정수로 교묘하게 할 경우 
+  switch 문 이 if문 보다 성능이 낫다고 함 
+  그래서, switch 문을 잘 활용하면 좋다. ( 자주 사용하는 습관을 들이도록 ! )
+  
+  switch 문 안에 int , byte, short, char, String까지 되지만(String도 자바 1.8이되면서,,? 사실 이건 잘기억안남,,), double형은 안됨
+
+ 
