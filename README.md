@@ -540,3 +540,25 @@ CPU가 할당되는 실체이다.
   switch 문 안에 int , byte, short, char, String까지 되지만(String도 자바 1.8이되면서,,? 사실 이건 잘기억안남,,), double형은 안됨
 
  
+ ## 자바의 정렬 
+ ### 1. Comparable 과 Comparator란?
+
+1. Comparable 인터페이스
+- 정의: 정렬 수행시 **기본적으로 적용되는 정렬 기준이 되는 메서드를 정의해 놓는 인터페이스**이다.
+- 사용법: **Comparable 인터페이스를 implements 한 뒤, 내부에 있는 compareTo 메서드를 원하는 정렬 기준대로 구현**하여 사용할 수 있다.
+- 패키지:  **java.lang.Comparable**
+- 자바에서 제공되는 정렬이 가능한 클래스들은 모두 Comparable 인터페이스를 구현하고 있으며, 정렬시에 Comparable의 구현 내용에 맞춰 정렬이 수행된다.
+
+예를 들어 Integer, Double 등의 클래스의 경우 비 내림차순(오름차순과 유사), String 클래스의 경우 사전순으로 정렬되게 구현되어 있다. 
+
+2. Comparator 클래스
+
+- 정의 : 정렬 가능한 클래스 (=Comparable이 구현된 클래스)들의 **기본 정렬 기준과는 다른 방식으로 정렬하고 싶을 때 사용하는 클래스**이다.
+- 사용법: **Comparator 클래스를 생성하여, 내부에 compare 메서드를 원하는 정렬 기준대로** 구현하여 사용할 수 있다.
+- 패키지: **java.util.Comparator**
+- 주로 익명클래스(new Comparator() {...})로 사용되며, 기본적으로 오름차순이 정렬 기준인 것을 내림차순으로 정렬하는 등의 용도로 사용된다.
+
+[비교]
+
+
+출처: [https://m.blog.naver.com/occidere/220918234464](https://m.blog.naver.com/occidere/220918234464)
