@@ -560,5 +560,11 @@ CPU가 할당되는 실체이다.
 
 [비교]
 
+### Clone() : clone 원본 객체의 필드값과 동일한 값을 가지는 새로운 객체를 생성
+- 복제이유: 원본객체를 안전하게 보호하기 위해서
+-  cloneable 인터페이스를 구현하지 않으면 clone()메소드를 호출할 때 CloneNotSupportedException예외가 발생
+-  try-catch 구문 필요
+- 얕은복제(this clone)와 깊은복제(deep clone)가있음
 
+출처: https://jyosssss.tistory.com/78 [개미는 뜐뜐]
 출처: [https://m.blog.naver.com/occidere/220918234464](https://m.blog.naver.com/occidere/220918234464)
